@@ -1,0 +1,289 @@
+\documentclass{beamer}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{animate} 
+\usepackage{geometry}
+\usepackage{textpos}
+
+% Define colors
+\definecolor{color1}{RGB}{64, 99, 82}    % Dark green
+\definecolor{color2}{RGB}{151, 208, 177} % Light green
+\definecolor{color3}{RGB}{200, 194, 224} % Light purple
+\definecolor{color4}{RGB}{240, 92, 79}   % Coral
+\definecolor{color5}{RGB}{41, 40, 102}   % Dark blue
+\definecolor{color6}{RGB}{255,252,240}   % Cream
+
+% Define colors for the box (optional)
+\definecolor{boxcolor}{RGB}{255, 255, 255}   % White box
+\definecolor{bordercolor}{RGB}{64, 99, 82}  % Dark green border
+\definecolor{textcolor}{RGB}{41, 40, 102}   % Dark blue text
+
+% Set background image for the first slide
+\setbeamertemplate{background}{
+    \includegraphics[width=\paperwidth,height=\paperheight]{background.pdf}
+}
+
+% Create a command for the title box
+\newcommand{\titlebox}[1]{  
+    \begin{tikzpicture}[remember picture,overlay]
+        % Create a white box for title, author, and date
+        \node[fill=boxcolor, draw=bordercolor, line width=0.1mm, rounded corners=2pt,
+              text width=0.7\paperwidth, text centered, inner sep=10mm] 
+              at (current page.center) 
+              {
+                \color{textcolor} % Set text color
+                #1 % Content passed to the title box
+              };
+    \end{tikzpicture}
+}
+
+\begin{document}
+
+% First Slide (Title Slide)
+\begin{frame}[plain]
+    \titlebox{%
+        {\LARGE \textbf{Welcome to the Presentation}} \\[0.5cm] % Title
+        {\large Subtitle Here} \\[1cm]                     % Subtitle
+        \textit{Name} \\[0.2cm]                             % Author
+    }
+\end{frame}
+
+
+
+% Restore default margins
+\restoregeometry
+
+% Set plain background for the rest of the slides
+\setbeamertemplate{background}{}
+
+
+\begin{frame}
+  \frametitle{\textcolor{black}{Table of Contents}}
+  
+  \begin{itemize}
+    \setbeamercolor{itemize item}{fg=color1}
+    \setbeamercolor{itemize subitem}{fg=color1}
+    \item \textcolor{color1}{Section 1}
+        \begin{itemize}
+        \item Text
+        \end{itemize}
+    
+    \setbeamercolor{itemize item}{fg=color2}
+    \setbeamercolor{itemize subitem}{fg=color2}
+    \item \textcolor{color2}{Section 2}
+        \begin{itemize}
+            \item Section 2.1
+            \item Section 2.2
+        \end{itemize}
+
+    \setbeamercolor{itemize item}{fg=color3}
+    \setbeamercolor{itemize subitem}{fg=color3}
+    \item \textcolor{color3}{Section 3}
+        \begin{itemize}
+        \item Section 3.1
+        \item Section 3.2
+        \end{itemize}
+
+    \setbeamercolor{itemize item}{fg=color4}
+    \setbeamercolor{itemize subitem}{fg=color4}
+    \item \textcolor{color4}{Section 4}
+        \begin{itemize}
+        \item Section 4.1
+        \item Section 4.2
+        \end{itemize}
+
+    \setbeamercolor{itemize item}{fg=color5}
+    \setbeamercolor{itemize subitem}{fg=color5}
+    \item \textcolor{color5}{Section 5}
+  \end{itemize}
+\end{frame}
+
+
+
+
+% Set plain background for the rest of the slides
+\setbeamertemplate{background canvas}[default]
+
+
+% Section 1
+\setbeamercolor{title}{fg=color1}
+\setbeamercolor{frametitle}{bg=color1, fg=white}
+\setbeamercolor{structure}{fg=color1}
+\setbeamercolor{section in toc}{fg=color1}
+\setbeamercolor{section in head/foot}{bg=color1, fg=white}
+\setbeamercolor{section in sidebar}{fg=color1}
+\setbeamercolor{itemize item}{fg=color1}
+\setbeamercolor{itemize subitem}{fg=color1}
+\setbeamercolor{caption name}{fg=color1}
+
+% Subsection 1
+\section{Section 1}
+
+\begin{frame}
+\frametitle{Section 1}
+  \begin{itemize}
+    \item Text
+  \end{itemize}
+\end{frame}
+
+% Section 2
+\setbeamercolor{title}{fg=color2}
+\setbeamercolor{frametitle}{bg=color2, fg=white}
+\setbeamercolor{structure}{fg=color2}
+\setbeamercolor{section in toc}{fg=color2}
+\setbeamercolor{section in head/foot}{bg=color2, fg=white}
+\setbeamercolor{section in sidebar}{fg=color2}
+\setbeamercolor{itemize item}{fg=color2}
+\setbeamercolor{itemize subitem}{fg=color2}
+\setbeamercolor{caption name}{fg=color2}
+
+\section{Section 2}
+
+\begin{frame}
+\frametitle{Section 2}
+  \begin{itemize}
+    \item Text
+  \end{itemize}
+\end{frame}
+
+% Subsection 2.1
+\subsection{Subsection 2.1}
+\begin{frame}
+\frametitle{Subsection 2.1}
+  \begin{itemize}
+    \item Text
+  \end{itemize}
+\end{frame}
+
+
+
+% Subsection 2.2
+\subsection{Subsection 2.2}
+\begin{frame}
+\frametitle{Subsection 2.2}
+  \begin{itemize}
+    \item Text
+  \end{itemize}
+\end{frame}
+
+
+% Section 3
+\setbeamercolor{title}{fg=color3}
+\setbeamercolor{frametitle}{bg=color3, fg=white}
+\setbeamercolor{structure}{fg=color3}
+\setbeamercolor{section in toc}{fg=color3}
+\setbeamercolor{section in head/foot}{bg=color3, fg=white}
+\setbeamercolor{section in sidebar}{fg=color3}
+\setbeamercolor{itemize item}{fg=color3}
+\setbeamercolor{itemize subitem}{fg=color3}
+\setbeamercolor{caption name}{fg=color3}
+
+\section{Section 3}
+
+\begin{frame}
+\frametitle{Section 3}
+  \begin{itemize}
+    \item Text
+  \end{itemize}
+\end{frame}
+
+
+% Subsection 3.1
+\subsection{Subsection 3.1}
+\begin{frame}
+\frametitle{Subsection 3.1}
+  \begin{itemize}
+    \item Text
+  \end{itemize}
+\end{frame}
+
+
+
+% Subsection 3.2
+\subsection{Subsection 3.2}
+\begin{frame}
+\frametitle{Subsection 3.2}
+  \begin{itemize}
+    \item Text
+  \end{itemize}
+\end{frame}
+
+% Section 4
+\setbeamercolor{title}{fg=color4}
+\setbeamercolor{frametitle}{bg=color4, fg=white}
+\setbeamercolor{structure}{fg=color4}
+\setbeamercolor{section in toc}{fg=color4}
+\setbeamercolor{section in head/foot}{bg=color4, fg=white}
+\setbeamercolor{section in sidebar}{fg=color4}
+\setbeamercolor{itemize item}{fg=color4}
+\setbeamercolor{itemize subitem}{fg=color4}
+\setbeamercolor{caption name}{fg=color4}
+
+
+\section{Section 4}
+
+\begin{frame}
+\frametitle{Section 4}
+  \begin{itemize}
+    \item Text
+  \end{itemize}
+\end{frame}
+
+
+% Subsection 4.1
+\subsection{Subsection 4.1}
+\begin{frame}
+\frametitle{Subsection 4.1}
+  \begin{itemize}
+    \item Text
+  \end{itemize}
+\end{frame}
+
+
+
+% Subsection 4.2
+\subsection{Subsection 4.2}
+\begin{frame}
+\frametitle{Subsection 4.2}
+  \begin{itemize}
+    \item Text
+  \end{itemize}
+\end{frame}
+
+
+% Section 5
+\setbeamercolor{title}{fg=color5}
+\setbeamercolor{frametitle}{bg=color5, fg=white}
+\setbeamercolor{structure}{fg=color5}
+\setbeamercolor{section in toc}{fg=color5}
+\setbeamercolor{section in head/foot}{bg=color5, fg=white}
+\setbeamercolor{section in sidebar}{fg=color5}
+\setbeamercolor{itemize item}{fg=color5}
+\setbeamercolor{itemize subitem}{fg=color5}
+\setbeamercolor{caption name}{fg=color5}
+
+\section{Section 5}
+
+\begin{frame}
+\frametitle{Section 5}
+  \begin{itemize}
+    \item Text
+  \end{itemize}
+\end{frame}
+
+
+% Last Slide with Background
+\begin{frame}[plain]
+    \begin{picture}(0,0) % This allows overlaying elements
+        \put(-29,-169){\includegraphics[width=\paperwidth,height=\paperheight]{background.pdf}} % Adjust positioning
+    \end{picture}
+    
+    % Add title box on top of the background
+    \titlebox{%
+        {\LARGE \textbf{Thank You}} \\[1cm] 
+        \textit{Any Questions?}               
+    }
+\end{frame}
+
+\end{document}
